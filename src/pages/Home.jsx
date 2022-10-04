@@ -20,6 +20,7 @@ const Home = () => {
   const [categories, setCategories] = useState([]);
   const [productFiltered, setProductFiltered] = useState([]);
   const [productName, setProductName] = useState("");
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     axios
@@ -51,11 +52,13 @@ const Home = () => {
     setProductFiltered(filtered);
   };
 
+  
   return (
     <Row>
       <Col lg={3}>
+        <button onClick={() => setShow(!show)} >show / hide</button>
         <ListGroup>
-          {categories.map((category) => (
+          {show && categories.map((category) => (
             <ListGroupItem key={category.id} onClick={() => filterCategory(category.id)} style={{cursor: "pointer"}}>
               {category.name}
             </ListGroupItem>
@@ -64,11 +67,12 @@ const Home = () => {
       </Col>
       <Col>
         <InputGroup className="mb-3 mt-3">
-          <Form.Control
+            <Form.Control
             placeholder="Search Product"
             onChange={(e) => setProductName(e.target.value)}
             value={productName}
           />
+          
           <Button variant="outline-secondary" onClick={searchProduct}>
             Button
           </Button>
