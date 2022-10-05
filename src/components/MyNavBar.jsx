@@ -17,7 +17,7 @@ const MyNavBar = () => {
 
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="lights" expand="lg">
       <Container fluid>
         <Navbar.Brand to="/" as={Link}>
           e-commerce
@@ -39,7 +39,7 @@ const MyNavBar = () => {
               <i className="fa-solid fa-cart-shopping"></i>
             </Nav.Link>
             <Nav.Link onClick={logout} >
-              Logout
+              <i className="fa-solid fa-right-from-bracket"></i>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

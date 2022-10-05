@@ -56,7 +56,7 @@ const Home = () => {
   return (
     <Row>
       <Col lg={3}>
-        <button onClick={() => setShow(!show)} >show / hide</button>
+        <p>Categories <i onClick={() => setShow(!show)} className="fa-solid fa-caret-down"></i></p>
         <ListGroup>
           {show && categories.map((category) => (
             <ListGroupItem key={category.id} onClick={() => filterCategory(category.id)} style={{cursor: "pointer"}}>
@@ -73,8 +73,8 @@ const Home = () => {
             value={productName}
           />
           
-          <Button variant="outline-secondary" onClick={searchProduct}>
-            Button
+          <Button className="btn btn-dark" variant="outline-secondary" onClick={searchProduct}>
+            Search
           </Button>
         </InputGroup>
 

@@ -4,7 +4,7 @@ import { setIsLoading } from './isLoading.slice';
 import  getConfig  from '../../utils/getConfig'
 
 export const purchasesSlice = createSlice({
-    name: 'purchasesSlice',
+    name: 'purchases',
     initialState: [],
     reducers: {
         setPurchases: (state, action) => {

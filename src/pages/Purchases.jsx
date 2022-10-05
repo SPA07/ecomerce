@@ -6,9 +6,8 @@ const Purchases = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(getPurchasesThunk)
+        dispatch(getPurchasesThunk());
     }, [])
-
 
 
     return (
