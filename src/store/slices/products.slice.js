@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import getConfig from '../../utils/getConfig';
 import { setIsLoading } from './isLoading.slice';
 
 export const productsSlice = createSlice({
@@ -19,6 +20,7 @@ export const getProductsThunk = () => dispatch => {
     .then(res => dispatch(setProducts(res.data.data.products)))
     .finally(() => dispatch(setIsLoading(false)))
 }
+
 
 export const { setProducts } = productsSlice.actions;
 

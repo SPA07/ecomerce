@@ -1,0 +1,9 @@
+#nav i {
+    padding: 5px;
+    color: black;
+    font-size: 18px;
+}
+
+#nav i:hover {
+    color: rgba(0, 0, 0, 0.313);
+}

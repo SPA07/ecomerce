@@ -11,8 +11,8 @@ import {
   ListGroup,
   Row,
   ListGroupItem,
-  CardImg
 } from "react-bootstrap";
+import "../styles/home.css";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -52,28 +52,45 @@ const Home = () => {
     setProductFiltered(filtered);
   };
 
-  
   return (
     <Row>
-      <Col lg={3}>
-        <p>Categories <i onClick={() => setShow(!show)} className="fa-solid fa-caret-down"></i></p>
+      <Col id="column-categories" lg={3}>
+        <p >
+          Categories{" "}
+          {/* <i
+            // onClick={() => setShow(!show)}
+            className="fa-solid fa-caret-down"
+          ></i> */}
+          
+        </p>
         <ListGroup>
-          {show && categories.map((category) => (
-            <ListGroupItem key={category.id} onClick={() => filterCategory(category.id)} style={{cursor: "pointer"}}>
-              {category.name}
-            </ListGroupItem>
-          ))}
+          {
+            categories.map((category) => (
+              <ListGroupItem 
+                // className={`${show && 'category-list-openAnimation'}`}
+                key={category.id}
+                onClick={() => filterCategory(category.id)}
+                style={{ cursor: "pointer" }}
+              >
+                {category.name}
+              </ListGroupItem>
+            ))}
         </ListGroup>
       </Col>
       <Col>
         <InputGroup className="mb-3 mt-3">
-            <Form.Control
+          <Form.Control
             placeholder="Search Product"
             onChange={(e) => setProductName(e.target.value)}
+            aria-describedby="basic-addon2"
             value={productName}
           />
-          
-          <Button className="btn btn-dark" variant="outline-secondary" onClick={searchProduct}>
+
+          <Button
+            className="btn btn-dark"
+            variant="outline-secondary"
+            onClick={searchProduct}
+          >
             Search
           </Button>
         </InputGroup>
@@ -81,14 +98,30 @@ const Home = () => {
         <Row xs={1} md={2} xl={3} className="g-4" id="cards">
           {productFiltered.map((product) => (
             <Col key={product.id}>
-              <Card 
-              onClick={() => navigate(`/product/${product.id}`)}
-              style={{height: "100%"}}
+              <Card
+                onClick={() => navigate(`/product/${product.id}`)}
+                style={{ height: "100%" }}
               >
-                <CardImg id="card-img" variant="top" src={product.productImgs?.[1]} alt="image" />
+                 <div className="img-container">
+                <img src={product.productImgs[1]} alt="" />
+                <div className="overlay-container">
+                  <img
+                    className="overlay-img"
+                    src={product.productImgs[0]}
+                    alt=""
+                  />
+                </div>
+              </div>
                 <Card.Body>
                   <Card.Title>{product.title}</Card.Title>
-                  <Card.Text>${product.price}</Card.Text>
+                  <div className="product-price">
+                  <Card.Text>
+                    <span>Price:  ${product.price} </span>
+                  </Card.Text>
+                  <Card.Text>
+                    <span>{product.status}</span>
+                  </Card.Text>
+                  </div>
                 </Card.Body>
               </Card>
             </Col>

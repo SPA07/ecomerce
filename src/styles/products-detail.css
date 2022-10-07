@@ -1,0 +1,345 @@
+.products-details-container {
+    /* border: 1px solid; */
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.back-home {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.back-home i {
+    font-size: 8px;
+}
+
+.back-home p{
+    margin: 0;
+    color: #212529;
+    font-size: 16px;
+}
+
+.return-home:hover{
+    color: #292929c3;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.galery-product-container {
+    /* border: 1px solid; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+.carousel-container{
+    grid-column: start 0;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-dark {
+    position: relative;
+    background: white;
+    border: 1px solid rgba(33, 37, 41, 0.29);
+    border-radius: 0.5rem;
+    height: 400px !important;
+    width: 100% !important;
+}
+
+.carousel-item img{
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 230px;
+}
+
+.detail-info-container {
+    width: 500px;
+    text-align: left;
+}
+
+.detail-info-container h1 {
+    font-size: 30px;
+}
+
+.detail-info-container p {
+    width: 90%;
+    font-size: 13px;
+    text-align: justify;
+}
+
+.price-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.price {
+    width: 70%;
+    text-align: start;
+    display: flex;
+}
+
+.price h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.price p {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #212529a7;
+}
+
+.quantity-container{
+    width: 40%;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.quantity-container h5 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.qty-product-container p {
+    border-left: 1px solid #21252956;
+    border-right: 1px solid #21252956;
+    width: 80%;
+    margin: 0;
+    color: #090a0aa7;
+    font-size: 16px;
+    text-align: center;
+}
+
+.qty-product-container button {
+    margin: 0;
+    width: 30px;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    color: #090a0aa7;
+}
+
+.qty-product-container button:hover {
+    background: #29b82ee3;
+    color: white;
+}
+
+.qty-product-container {
+    border-radius: 5px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 120px;
+    height: 25px;
+    border: 1px solid #21252956;
+}
+
+.add-to-cart {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.add-to-cart-btn {
+    width: 40%;
+    height: 35px;
+    border-radius: 0.5rem;
+    border: none;
+    background: #ffffffa5;
+    color: #26a82f;
+    box-shadow: 1px 1px 1px 1px #2020214a;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #26a82f;
+    color: #ffffff;
+}
+
+.add-to-cart-btn:active {
+    transform: translateY(2px);
+}
+
+.related-products-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.related-products-container h3 {
+    font-size: 28px;
+}
+
+.realted-products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.realted-products li {
+    text-decoration: none;
+    appearance: none;
+    outline: none;
+    list-style: none;
+    background: #fff;
+    color: #212529;
+    border: 1px solid #2125295d;
+    box-shadow: 1px 1px 5px #2125293f;
+    width: 300px;
+    height: 380px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.realted-products li h4 {
+    color: #212529;
+    font-size: 14px;
+}
+
+.realted-products li img{
+    margin-top: 15px;
+    height: 150px;
+}
+
+.related-img-container {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+}
+
+.related-img-container img {
+    display: block;
+}
+
+.related-ovrl-container {
+    border-radius: 0.5rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .3s ease;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rp-overlay-img{
+    height: 95%;
+}
+
+.related-img-container:hover .related-ovrl-container {
+    opacity: 1;
+}
+
+.related-product-card-container {
+    width: 200px;
+    height:125px;
+    margin-bottom: 30px;
+    border-radius: 0.5rem;
+}
+
+.realted-title {
+    /* border: 1px solid; */
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.realted-title h4 {
+    margin-top: 0px;
+    font-size: 12px;
+    text-align: start;
+    font-weight: 500;
+}
+
+.related-price h6{
+    font-size: 14px;
+    text-align: left;
+}
+
+.related-price span h6{
+    color: #212529;
+}
+
+.realted-add-to-cart-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    margin-top: -35px;
+}
+
+.realted-add-to-cart {
+    width: 40px;
+    height: 40px;
+    background: #227fdd;
+    border-radius: 50%;
+    color: white;
+    text-shadow: 1px 1px 1px #212529;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.realted-add-to-cart:hover {
+    cursor: pointer;
+    background: #383ab8c4;
+    color: white;
+}
