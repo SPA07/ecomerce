@@ -49,7 +49,7 @@ const ProductsDetail = () => {
   return (
     <div className="products-details-container">
       <div className="back-home">
-        <p className="return-home">Home</p>
+        <p className="return-home" onClick={() => navigate('/')}>Home</p>
         <i className="fa-solid fa-circle"></i>
         <p>{productDetail?.title}</p>
       </div>
