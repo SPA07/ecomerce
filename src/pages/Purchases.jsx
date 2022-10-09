@@ -23,7 +23,7 @@ const Purchases = () => {
   return (
     <Container id="purchases">
         <header>
-            <p onClick={() => navigate('/')} style={{cursor: 'pointer'}} >Home</p>
+            <p className="headerp" onClick={() => navigate('/')} style={{cursor: 'pointer',}} >Home</p>
             <p className="point"></p>
             <p>purchases</p>
         </header>

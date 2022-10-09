@@ -9,6 +9,10 @@ header p {
     font-family: 'Open Sans', sans-serif;
 }
 
+.headerp:hover {
+    text-decoration: underline;
+}
+
 .point {
     /* border: 1px solid; */
     border-radius: 50%;
@@ -29,7 +33,7 @@ header p {
 }
 
 .products:hover {
-    border-bottom: 1px solid rgba(57, 57, 57, 0.079) !important;
+    border-bottom: 1px solid #39393914 !important;
 }
 
 #price {
