@@ -12,7 +12,7 @@ const Login = () => {
     // console.log(data);
     axios
       .post(
-        "https://ecommerce-api-react.herokuapp.com/api/v1/users/login",
+        "https://e-commerce-api.academlo.tech/api/v1/users/login",
         data
       )
       .then((res) => {
